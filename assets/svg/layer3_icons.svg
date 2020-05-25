@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="861.728" viewBox="0 0 414 861.728">
+  <g id="Group_3" data-name="Group 3" transform="translate(0 -726)">
+    <path id="Path_1" data-name="Path 1" d="M34.841.18,64.08,50.617H34.841Z" transform="translate(-34.841 725.82)" fill="#5c8d89"/>
+    <path id="Path_2" data-name="Path 2" d="M95.1,53l-23.92-41.43-8.643,14.97L77.738,53ZM73.281,53H47.265l13.043-22.59Z" transform="translate(-44.245 723.234)" fill="#5c8d89" fill-rule="evenodd"/>
+    <g id="Forest" transform="translate(293.207 1433.46)">
+      <path id="Path_10" data-name="Path 10" d="M142.058.54l10.984,19.026h-21.97Z" transform="translate(-42.519)" fill="#a6d6c4"/>
+      <path id="Path_13" data-name="Path 13" d="M110.058,54.54l10.984,19.026H99.073Z" transform="translate(-32.459 -16.976)" fill="#a6d6c4"/>
+      <path id="Path_19" data-name="Path 19" d="M109.745,54.54V73.566H99.073Z" transform="translate(11.048 -16.976)" fill="#a6d6c4"/>
+    </g>
+    <g id="Forest-2" data-name="Forest" transform="translate(159.786 1536.569)">
+      <path id="Path_15" data-name="Path 15" d="M76.994.54l9.92,17.183H67.073Z" transform="translate(-24.372 0)" fill="#a6d6c4"/>
+      <path id="Path_17" data-name="Path 17" d="M108.994,54.54l9.92,17.183H99.073Z" transform="translate(-36.558 -20.564)" fill="#a6d6c4"/>
+      <path id="Path_18" data-name="Path 18" d="M44.994,54.54l9.92,17.183H35.073Z" transform="translate(-12.186 -20.564)" fill="#a6d6c4"/>
+    </g>
+  </g>
+</svg>

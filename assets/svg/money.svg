@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="44" viewBox="0 0 63 44">
+  <g id="money" transform="translate(-290 -2049)">
+    <g id="Group_6" data-name="Group 6" transform="translate(17 -22)">
+      <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(273 2081)" fill="#5c8d89" stroke="#84a9a7" stroke-width="1">
+        <rect width="52" height="34" stroke="none"/>
+        <rect x="0.5" y="0.5" width="51" height="33" fill="none"/>
+      </g>
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="11" cy="11" r="11" transform="translate(288 2087)" fill="#70ad95"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="6" cy="6" r="6" transform="translate(293 2092)" fill="#5c8d89"/>
+    </g>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="54" height="6" transform="translate(299 2049)" fill="#fd9326"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="28" height="6" transform="translate(347 2083) rotate(-90)" fill="#fd9326"/>
+  </g>
+</svg>

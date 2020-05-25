@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="378.251" height="1344.26" viewBox="0 0 378.251 1344.26">
+  <g id="Background" transform="translate(343.977 -1.802)">
+    <g id="water">
+      <path id="Path_7" data-name="Path 7" d="M2.595,7.5c12.34-9.975,20.915,7.6,29.7-3.8" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_8" data-name="Path 8" d="M2.595,29.207c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -10.778)" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_9" data-name="Path 9" d="M2.595,50.912c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -21.558)" fill="none" stroke="#74b49b" stroke-width="5"/>
+    </g>
+    <g id="water-2" data-name="water" transform="translate(-294 373)">
+      <path id="Path_7-2" data-name="Path 7" d="M2.595,7.5c12.34-9.975,20.915,7.6,29.7-3.8" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_8-2" data-name="Path 8" d="M2.595,29.207c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -10.778)" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_9-2" data-name="Path 9" d="M2.595,50.912c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -21.558)" fill="none" stroke="#74b49b" stroke-width="5"/>
+    </g>
+    <g id="water-3" data-name="water" transform="translate(-345 1314)">
+      <path id="Path_7-3" data-name="Path 7" d="M2.595,7.5c12.34-9.975,20.915,7.6,29.7-3.8" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_8-3" data-name="Path 8" d="M2.595,29.207c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -10.778)" fill="none" stroke="#74b49b" stroke-width="5"/>
+      <path id="Path_9-3" data-name="Path 9" d="M2.595,50.912c12.34-9.975,20.915,7.6,29.7-3.8" transform="translate(0 -21.558)" fill="none" stroke="#74b49b" stroke-width="5"/>
+    </g>
+  </g>
+</svg>
