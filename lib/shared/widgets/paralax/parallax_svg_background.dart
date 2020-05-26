@@ -221,28 +221,5 @@ class _ParallaxBackgroundPainter extends CustomPainter {
     }
 
     drawable.draw(canvas, null);
-
-    // canvas.drawPath(
-    //   path.transform(scaleMatrix.storage),
-    //   Paint()
-    //     ..color = color
-    //     ..style = PaintingStyle.fill,
-    // );
-
-    // if (enable3D == true) {
-    //   canvas.drawPath(
-    //     path.transform(scaleMatrix.storage),
-    //     Paint()
-    //       ..color = Color.fromARGB(40, 0, 0, 0)
-    //       ..style = PaintingStyle.fill,
-    //   );
-    // }
-
-    // canvas.drawPath(
-    //   path,
-    //   Paint()
-    //     ..color = color
-    //     ..style = PaintingStyle.fill,
-    // );
   }
 }

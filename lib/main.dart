@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter (fake) 3D Prallax',
+      title: 'Flutter Parallax Scroll',
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
