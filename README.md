@@ -1,16 +1,24 @@
-# flutter_parallax_scroll
+# Flutter UI Challenge- "Urban Planners" Parallax Scroll
 
-A new Flutter project.
+![Flutter parallax scroll "Urban Planners"](https://github.com/pawlik92/flutter_parallax_scroll/raw/master/doc/img/banner.png)
 
-## Getting Started
+## About project
 
-This project is a starting point for a Flutter application.
+The application was written based on this great UI concept: https://dribbble.com/shots/8907229-Urban-Planners-Mobile-Animation
 
-A few resources to get you started if this is your first Flutter project:
+Many thanks to **Stian**, for allowing me to write an application based on his UI concept. 
+Thanks a lot to him for his great involvement in this project.
+Check out the rest of his great designs: https://dribbble.com/Stian 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## App in action
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+!["Urban Planners" parallax scroll GIF 1](https://github.com/pawlik92/flutter_parallax_scroll/raw/master/doc/img/showcase_1.gif)
+!["Urban Planners" parallax scroll GIF 2](https://github.com/pawlik92/flutter_parallax_scroll/raw/master/doc/img/showcase_2.gif)
+
+## Follow me
+
+If you want to be informed about new projects, follow me on [Twitter](https://twitter.com/t_pawlik)
+
+## Dev
+
+To build application, you need to install **Flutter (1.17+)**. You can find help here: https://flutter.dev/docs/get-started/install
