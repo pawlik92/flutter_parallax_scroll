@@ -4,9 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    Key key,
-    @required this.text,
-    @required this.onPressed,
+    Key? key,
+    required this.text,
+    required this.onPressed,
     this.minWidth = 135.0,
     this.height = 62.0,
   }) : super(key: key);
@@ -21,14 +21,16 @@ class CustomButton extends StatelessWidget {
     return ButtonTheme(
       minWidth: minWidth,
       height: height,
-      child: RaisedButton(
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25.0),
-        ),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25.0),
+            ),
+            primary: CustomColors.orange,
+            elevation: 0,
+            textStyle: TextStyle(color: Colors.white)),
         onPressed: onPressed,
-        color: CustomColors.orange,
-        textColor: Colors.white,
         child: Text(
           text.toUpperCase(),
           style: GoogleFonts.nunito(

@@ -21,4 +21,4 @@ If you want to be informed about new projects, follow me on [Twitter](https://tw
 
 ## Dev
 
-To build application, you need to install **Flutter (1.17+)**. You can find help here: https://flutter.dev/docs/get-started/install
+To build application, you need to install **Flutter (2.0+)**. You can find help here: https://flutter.dev/docs/get-started/install

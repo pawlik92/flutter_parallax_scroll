@@ -1,11 +1,8 @@
 import 'dart:typed_data';
-import 'dart:ui';
 
 import 'package:quiver/core.dart' as quiver;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:vector_math/vector_math_64.dart';
 
 class ParallaxBackgroundSettings {
   const ParallaxBackgroundSettings({
@@ -14,7 +11,7 @@ class ParallaxBackgroundSettings {
     this.shadowColor = const Color(0x00000000),
   });
 
-  final Float64List deepEffectMatrix;
+  final Float64List? deepEffectMatrix;
   final double shadowSigma;
   final Color shadowColor;
 
@@ -37,14 +34,14 @@ class ParallaxBackgroundSettings {
       shadowColor == other.shadowColor;
 
   @override
-  int get hashCode => quiver.hash3(deepEffectMatrix?.hashCode ?? 1,
-      shadowColor?.hashCode ?? 2, shadowSigma?.hashCode ?? 3);
+  int get hashCode => quiver.hash3(
+      deepEffectMatrix.hashCode, shadowColor.hashCode, shadowSigma.hashCode);
 }
 
 class ParallaxSvgBackground extends StatefulWidget {
   const ParallaxSvgBackground({
-    Key key,
-    @required this.svgAssetName,
+    Key? key,
+    required this.svgAssetName,
     this.disableDeepEffect = false,
     this.disableShadow = false,
     this.translationOffset = Offset.zero,
@@ -57,7 +54,7 @@ class ParallaxSvgBackground extends StatefulWidget {
   final bool disableShadow;
   final String svgAssetName;
   final Offset translationOffset;
-  final ParallaxBackgroundSettings settings;
+  final ParallaxBackgroundSettings? settings;
   final bool autoXScale;
   final bool autoYScale;
 
@@ -109,7 +106,7 @@ class _ParallaxSvgBackgroundState extends State<ParallaxSvgBackground> {
           ),
         );
         if (_needsRepaint == true) {
-          WidgetsBinding.instance.addPostFrameCallback(
+          WidgetsBinding.instance!.addPostFrameCallback(
               (_) => setState(() => _needsRepaint = false));
         }
         return result;
@@ -138,37 +135,37 @@ class _ParallaxBackgroundPainter extends CustomPainter {
     this.screenSize,
   });
 
-  final bool disableDeepEffect;
-  final bool disableShadow;
-  final bool needsRepaint;
-  final DrawableRoot drawableRoot;
-  final Offset translationOffset;
-  final ParallaxBackgroundSettings settings;
-  final bool autoXScale;
-  final bool autoYScale;
-  final Size screenSize;
+  final bool? disableDeepEffect;
+  final bool? disableShadow;
+  final bool? needsRepaint;
+  final DrawableRoot? drawableRoot;
+  final Offset? translationOffset;
+  final ParallaxBackgroundSettings? settings;
+  final bool? autoXScale;
+  final bool? autoYScale;
+  final Size? screenSize;
 
   @override
   void paint(Canvas canvas, Size size) async {
     canvas.save();
     if (translationOffset != null) {
-      canvas.translate(translationOffset.dx, translationOffset.dy);
+      canvas.translate(translationOffset!.dx, translationOffset!.dy);
     }
 
     double scaleXFactor = 1;
     double scaleYFactor = 1;
 
     if (autoXScale == true) {
-      scaleXFactor = screenSize.width / drawableRoot.viewport.width;
+      scaleXFactor = screenSize!.width / drawableRoot!.viewport.width;
     }
     if (autoYScale == true) {
-      scaleYFactor = screenSize.height / drawableRoot.viewport.height;
+      scaleYFactor = screenSize!.height / drawableRoot!.viewport.height;
     }
 
     canvas.scale(scaleXFactor, scaleYFactor);
 
-    drawableRoot.clipCanvasToViewBox(canvas);
-    _drawPath(canvas, drawableRoot);
+    drawableRoot!.clipCanvasToViewBox(canvas);
+    _drawPath(canvas, drawableRoot!);
 
     canvas.restore();
   }
@@ -187,8 +184,9 @@ class _ParallaxBackgroundPainter extends CustomPainter {
         DrawableStyle(
           fill: DrawablePaint(
             PaintingStyle.fill,
-            color: settings.shadowColor,
-            maskFilter: MaskFilter.blur(BlurStyle.normal, settings.shadowSigma),
+            color: settings!.shadowColor,
+            maskFilter:
+                MaskFilter.blur(BlurStyle.normal, settings!.shadowSigma),
           ),
         ),
       );
@@ -196,7 +194,7 @@ class _ParallaxBackgroundPainter extends CustomPainter {
       canvas.save();
 
       canvas.transform(deepEffectMatrix);
-      shadowDrawable.draw(canvas, null);
+      shadowDrawable.draw(canvas, Rect.zero);
 
       canvas.restore();
     }
@@ -214,12 +212,12 @@ class _ParallaxBackgroundPainter extends CustomPainter {
       canvas.save();
 
       canvas.transform(deepEffectMatrix);
-      drawable.draw(canvas, null);
-      deepDrawable.draw(canvas, null);
+      drawable.draw(canvas, Rect.zero);
+      deepDrawable.draw(canvas, Rect.zero);
 
       canvas.restore();
     }
 
-    drawable.draw(canvas, null);
+    drawable.draw(canvas, Rect.zero);
   }
 }

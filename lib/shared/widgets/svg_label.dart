@@ -5,8 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SvgLabel extends StatelessWidget {
   SvgLabel({
-    @required this.assetName,
-    @required this.label,
+    required this.assetName,
+    required this.label,
   });
 
   final String assetName;

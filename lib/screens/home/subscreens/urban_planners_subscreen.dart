@@ -4,11 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class UrbanPlannersSubscreen extends StatelessWidget {
   const UrbanPlannersSubscreen({
-    Key key,
+    Key? key,
     this.controller,
   }) : super(key: key);
 
-  final ScrollController controller;
+  final ScrollController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -67,9 +67,9 @@ class UrbanPlannersSubscreen extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        FlatButton(
+        TextButton(
           onPressed: () {
-            controller.animateTo(1540,
+            controller!.animateTo(1540,
                 duration: Duration(milliseconds: 2300), curve: Curves.ease);
           },
           child: Text(

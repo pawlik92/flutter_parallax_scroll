@@ -5,11 +5,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class BenefitsSubscreen extends StatelessWidget {
   const BenefitsSubscreen({
-    Key key,
+    Key? key,
     this.controller,
   }) : super(key: key);
 
-  final ScrollController controller;
+  final ScrollController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ class BenefitsSubscreen extends StatelessWidget {
               text: 'Get in touch',
               minWidth: 200,
               onPressed: () {
-                controller.animateTo(0,
+                controller!.animateTo(0,
                     duration: Duration(milliseconds: 2300), curve: Curves.ease);
               },
             ),

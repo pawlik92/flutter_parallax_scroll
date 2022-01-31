@@ -3,7 +3,7 @@ import 'package:rxdart/rxdart.dart';
 
 class ParallaxScroll extends StatefulWidget {
   const ParallaxScroll({
-    Key key,
+    Key? key,
     this.children = const <Widget>[],
     this.parallaxBackgroundChildren = const <ParallaxElement>[],
     this.parallaxForegroundChildren = const <ParallaxElement>[],
@@ -14,8 +14,8 @@ class ParallaxScroll extends StatefulWidget {
   final List<Widget> children;
   final List<ParallaxElement> parallaxBackgroundChildren;
   final List<ParallaxElement> parallaxForegroundChildren;
-  final ScrollPhysics physic;
-  final ScrollController controller;
+  final ScrollPhysics? physic;
+  final ScrollController? controller;
 
   @override
   _ParallaxScrollState createState() => _ParallaxScrollState();
@@ -53,10 +53,6 @@ class _ParallaxScrollState extends State<ParallaxScroll> {
 
   List<_ParallaxElementWrapper> _buildParallaxElements(
       List<ParallaxElement> elements) {
-    if (elements == null) {
-      return [];
-    }
-
     List<_ParallaxElementWrapper> result = [];
     for (ParallaxElement element in elements) {
       result.add(
@@ -77,9 +73,7 @@ class _ParallaxScrollState extends State<ParallaxScroll> {
     return true;
   }
 
-  Stream<double> _getDelayedScrollStream(Duration duration) {
-    assert(duration != null);
-
+  Stream<double>? _getDelayedScrollStream(Duration duration) {
     if (!_scrollStreams.containsKey(duration)) {
       _generateScrollStream(duration);
     }
@@ -95,9 +89,9 @@ class _ParallaxScrollState extends State<ParallaxScroll> {
 
 class ParallaxElement extends StatelessWidget {
   const ParallaxElement({
-    Key key,
+    Key? key,
     this.scrollDelay = const Duration(),
-    @required this.child,
+    required this.child,
   }) : super(key: key);
 
   final Duration scrollDelay;
@@ -105,19 +99,19 @@ class ParallaxElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return child ?? Container();
+    return child;
   }
 }
 
 class _ParallaxElementWrapper extends StatelessWidget {
   const _ParallaxElementWrapper(
     this.child, {
-    @required this.scrollPostitionStream,
-    Key key,
+    required this.scrollPostitionStream,
+    Key? key,
   }) : super(key: key);
 
   final ParallaxElement child;
-  final Stream<double> scrollPostitionStream;
+  final Stream<double>? scrollPostitionStream;
 
   @override
   Widget build(BuildContext context) {

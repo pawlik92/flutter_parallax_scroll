@@ -6,7 +6,7 @@ import 'package:flutter_parallax_scroll/shared/consts.dart';
 import 'package:flutter_parallax_scroll/shared/widgets/paralax.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
