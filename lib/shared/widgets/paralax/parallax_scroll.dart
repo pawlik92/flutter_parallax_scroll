@@ -18,12 +18,12 @@ class ParallaxScroll extends StatefulWidget {
   final ScrollController? controller;
 
   @override
-  _ParallaxScrollState createState() => _ParallaxScrollState();
+  State createState() => _ParallaxScrollState();
 }
 
 class _ParallaxScrollState extends State<ParallaxScroll> {
   final _scrollDataSubject = BehaviorSubject<double>();
-  Map<Duration, Stream<double>> _scrollStreams = Map();
+  final Map<Duration, Stream<double>> _scrollStreams = {};
 
   @override
   void dispose() {

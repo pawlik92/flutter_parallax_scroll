@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 
-import 'package:quiver/core.dart' as quiver;
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:quiver/core.dart' as quiver;
 
 class ParallaxBackgroundSettings {
   const ParallaxBackgroundSettings({
@@ -21,7 +21,7 @@ class ParallaxBackgroundSettings {
             ..scale(1.02, 1.010)
             ..translate(-9.0, 2))
           .storage,
-      shadowColor: Color.fromARGB(110, 0, 0, 0),
+      shadowColor:const Color.fromARGB(110, 0, 0, 0),
       shadowSigma: 12,
     );
   }
@@ -39,7 +39,7 @@ class ParallaxBackgroundSettings {
 }
 
 class ParallaxSvgBackground extends StatefulWidget {
-  const ParallaxSvgBackground({
+   const ParallaxSvgBackground({
     Key? key,
     required this.svgAssetName,
     this.disableDeepEffect = false,
@@ -59,7 +59,7 @@ class ParallaxSvgBackground extends StatefulWidget {
   final bool autoYScale;
 
   @override
-  _ParallaxSvgBackgroundState createState() => _ParallaxSvgBackgroundState();
+  State createState() => _ParallaxSvgBackgroundState();
 }
 
 class _ParallaxSvgBackgroundState extends State<ParallaxSvgBackground> {
@@ -67,7 +67,7 @@ class _ParallaxSvgBackgroundState extends State<ParallaxSvgBackground> {
       widget.settings ?? _predefinedSettings;
 
   bool _needsRepaint = false;
-  ParallaxBackgroundSettings _predefinedSettings =
+  final ParallaxBackgroundSettings _predefinedSettings =
       ParallaxBackgroundSettings.predefined();
 
   @override
@@ -106,7 +106,7 @@ class _ParallaxSvgBackgroundState extends State<ParallaxSvgBackground> {
           ),
         );
         if (_needsRepaint == true) {
-          WidgetsBinding.instance!.addPostFrameCallback(
+          WidgetsBinding.instance.addPostFrameCallback(
               (_) => setState(() => _needsRepaint = false));
         }
         return result;
@@ -201,7 +201,7 @@ class _ParallaxBackgroundPainter extends CustomPainter {
 
     if (disableDeepEffect != true) {
       var deepDrawable = drawable.mergeStyle(
-        DrawableStyle(
+        const DrawableStyle(
           fill: DrawablePaint(
             PaintingStyle.fill,
             color: Color.fromARGB(40, 0, 0, 0),
