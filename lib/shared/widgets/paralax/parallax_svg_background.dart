@@ -21,7 +21,7 @@ class ParallaxBackgroundSettings {
             ..scale(1.02, 1.010)
             ..translate(-9.0, 2))
           .storage,
-      shadowColor:const Color.fromARGB(110, 0, 0, 0),
+      shadowColor: const Color.fromARGB(110, 0, 0, 0),
       shadowSigma: 12,
     );
   }
@@ -39,7 +39,7 @@ class ParallaxBackgroundSettings {
 }
 
 class ParallaxSvgBackground extends StatefulWidget {
-   const ParallaxSvgBackground({
+  const ParallaxSvgBackground({
     Key? key,
     required this.svgAssetName,
     this.disableDeepEffect = false,
@@ -48,7 +48,7 @@ class ParallaxSvgBackground extends StatefulWidget {
     this.settings,
     this.autoXScale = false,
     this.autoYScale = false,
-  });
+  }) : super(key: key);
 
   final bool disableDeepEffect;
   final bool disableShadow;

@@ -25,10 +25,10 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             padding:
                 const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            backgroundColor: CustomColors.orange,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25.0),
             ),
-            primary: CustomColors.orange,
             elevation: 0,
             textStyle: const TextStyle(color: Colors.white)),
         onPressed: onPressed,
