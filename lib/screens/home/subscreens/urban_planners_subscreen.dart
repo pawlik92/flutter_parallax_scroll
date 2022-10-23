@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_parallax_scroll/shared/colors.dart';
+import '../../../shared/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UrbanPlannersSubscreen extends StatelessWidget {
@@ -16,9 +16,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 200,
-        ),
+        const SizedBox(height: 200),
         Text(
           'Lots. For little'.toUpperCase(),
           textAlign: TextAlign.center,
@@ -28,9 +26,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
             fontWeight: FontWeight.w900,
           ),
         ),
-        SizedBox(
-          height: 22,
-        ),
+        const SizedBox(height: 22),
         Text(
           'Urban \nPlanners',
           textAlign: TextAlign.center,
@@ -41,9 +37,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
             height: .9,
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        const SizedBox(height: 20),
         SizedBox(
           width: 70,
           height: 5,
@@ -51,9 +45,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
             color: CustomColors.orange,
           ),
         ),
-        SizedBox(
-          height: 25,
-        ),
+        const SizedBox(height: 25),
         Text(
           'Location matters as much as \nyour house, we focus on the \nwhole experience of real estate.',
           textAlign: TextAlign.center,
@@ -64,13 +56,12 @@ class UrbanPlannersSubscreen extends StatelessWidget {
             height: 1.2,
           ),
         ),
-        SizedBox(
-          height: 10,
-        ),
+        const SizedBox(height: 10),
         TextButton(
           onPressed: () {
             controller!.animateTo(1540,
-                duration: Duration(milliseconds: 2300), curve: Curves.ease);
+                duration: const Duration(milliseconds: 2300),
+                curve: Curves.ease);
           },
           child: Text(
             'Show more',
@@ -82,13 +73,9 @@ class UrbanPlannersSubscreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
-          height: 330,
-        ),
+        const SizedBox(height: 330),
         _buildExteriorInfoSection(),
-        SizedBox(
-          height: 370,
-        ),
+        const SizedBox(height: 370),
       ],
     );
   }
@@ -97,7 +84,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
     return Align(
       alignment: Alignment.centerLeft,
       child: Padding(
-        padding: EdgeInsets.only(left: 30.0),
+        padding: const EdgeInsets.only(left: 30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -111,9 +98,7 @@ class UrbanPlannersSubscreen extends StatelessWidget {
                 height: 1,
               ),
             ),
-            SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: 16),
             Text(
               'We know all the \nsweet spots \nin your region.',
               style: GoogleFonts.nunito(

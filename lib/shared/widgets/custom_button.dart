@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_parallax_scroll/shared/colors.dart';
+import '../colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
@@ -23,13 +23,14 @@ class CustomButton extends StatelessWidget {
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            backgroundColor: CustomColors.orange,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25.0),
             ),
-            primary: CustomColors.orange,
             elevation: 0,
-            textStyle: TextStyle(color: Colors.white)),
+            textStyle: const TextStyle(color: Colors.white)),
         onPressed: onPressed,
         child: Text(
           text.toUpperCase(),

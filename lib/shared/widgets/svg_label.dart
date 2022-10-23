@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_parallax_scroll/shared/colors.dart';
+import '../colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SvgLabel extends StatelessWidget {
-  SvgLabel({
+   const SvgLabel({Key? key, 
     required this.assetName,
     required this.label,
-  });
+  }) : super(key: key);
 
   final String assetName;
   final String label;
@@ -18,7 +18,7 @@ class SvgLabel extends StatelessWidget {
       SvgPicture.asset(
         assetName,
       ),
-      SizedBox(height: 22.0),
+      const SizedBox(height: 22.0),
       Text(
         label.toUpperCase(),
         textAlign: TextAlign.center,

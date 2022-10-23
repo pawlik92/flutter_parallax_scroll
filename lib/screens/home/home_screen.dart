@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_parallax_scroll/screens/home/subscreens/benefits_subscreen.dart';
-import 'package:flutter_parallax_scroll/screens/home/subscreens/urban_planners_subscreen.dart';
-import 'package:flutter_parallax_scroll/shared/colors.dart';
-import 'package:flutter_parallax_scroll/shared/consts.dart';
-import 'package:flutter_parallax_scroll/shared/widgets/paralax.dart';
+import 'subscreens/benefits_subscreen.dart';
+import 'subscreens/urban_planners_subscreen.dart';
+import '../../shared/colors.dart';
+import '../../shared/consts.dart';
+import '../../shared/widgets/paralax.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -29,16 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
         color: CustomColors.backgroundGreen,
         child: ParallaxScroll(
           controller: controller,
-          physic: ClampingScrollPhysics(),
-          children: <Widget>[
-            UrbanPlannersSubscreen(controller: controller),
-            BenefitsSubscreen(controller: controller),
-          ],
+          physic: const ClampingScrollPhysics(),
           parallaxBackgroundChildren: _buildParallaxElements(),
           parallaxForegroundChildren: [
             ParallaxElement(
               child: _buildEffectToggle(),
             )
+          ],
+          children: [
+            UrbanPlannersSubscreen(controller: controller),
+            BenefitsSubscreen(controller: controller),
           ],
         ),
       ),
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<ParallaxElement> _buildParallaxElements() {
     return [
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 230),
+        scrollDelay: const Duration(milliseconds: 230),
         child: ParallaxSvgBackground(
           disableDeepEffect: true,
           disableShadow: true,
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 230),
+        scrollDelay: const Duration(milliseconds: 230),
         child: ParallaxSvgBackground(
           disableDeepEffect: _disabled3D,
           settings: ParallaxBackgroundSettings.predefined(),
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 230),
+        scrollDelay: const Duration(milliseconds: 230),
         child: ParallaxSvgBackground(
           disableDeepEffect: true,
           disableShadow: true,
@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 150),
+        scrollDelay: const Duration(milliseconds: 150),
         child: ParallaxSvgBackground(
           disableDeepEffect: _disabled3D,
           settings: ParallaxBackgroundSettings.predefined(),
@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 150),
+        scrollDelay: const Duration(milliseconds: 150),
         child: ParallaxSvgBackground(
           disableDeepEffect: true,
           disableShadow: true,
@@ -96,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       ParallaxElement(
-        scrollDelay: Duration(milliseconds: 40),
+        scrollDelay: const Duration(milliseconds: 40),
         child: ParallaxSvgBackground(
           disableDeepEffect: _disabled3D,
           settings: ParallaxBackgroundSettings.predefined(),
